@@ -24,6 +24,12 @@ public class ConsoleExercises {
         scanner.nextLine();
         System.out.print("Please enter a full sentence: ");
         String uSent = scanner.nextLine();
-        System.out.printf("Your sentence is: %n %s", uSent);
+        System.out.printf("Your sentence is: %n %s %n", uSent);
+
+        System.out.print("Enter the length and width of your classroom, separated by a space: ");
+        scanner.useDelimiter("\\s");
+        int cLen = scanner.nextInt();
+        int cWid = scanner.nextInt();
+        System.out.printf("The area of your classroom is: %d %n", cLen * cWid);
     }
 }
