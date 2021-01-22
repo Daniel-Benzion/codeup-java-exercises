@@ -36,5 +36,14 @@ public class ControlFlowExercises {
 
         System.out.println("-----");
 
+        for (int ii = 100; ii >= -10; ii -= 5) {
+            System.out.println(ii);
+        }
+
+        System.out.println("-----");
+
+        for (long k = 2; k < 1_000_000; k *= k) {
+            System.out.println(k);
+        }
     }
 }
