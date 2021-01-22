@@ -92,5 +92,22 @@ public class ControlFlowExercises {
             System.out.printf("%d\t   | %d\t\t | %d%n", kk, (kk * kk), (kk * kk * kk));
         }
 
+
+
+        System.out.print("Enter your number grade, 0 - 100: ");
+        userInt = scanner.nextInt();
+
+        System.out.print("Your letter grade is: ");
+        if (userInt > 87) {
+            System.out.println("A");
+        } else if (userInt > 79) {
+            System.out.println("B");
+        } else if (userInt > 66) {
+            System.out.println("C");
+        } else if (userInt > 59) {
+            System.out.println("D");
+        } else {
+            System.out.println("F");
+        }
     }
 }
