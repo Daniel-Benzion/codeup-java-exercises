@@ -9,9 +9,9 @@ public class Bob {
 		while (true) {
 			String input = scanner.nextLine();
 			if (input.equalsIgnoreCase("goodbye")) {
-				System.out.println("Goodbye!");
+				System.out.println("Later, dude...");
 				break;
-			}else if (input.endsWith("?")) {
+			} else if (input.endsWith("?")) {
 				System.out.println("Sure.");
 			} else if (input.endsWith("!")) {
 				System.out.println("Whoa, chill out!");
