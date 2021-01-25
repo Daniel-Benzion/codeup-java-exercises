@@ -6,5 +6,7 @@ public class StringExercise {
         System.out.println(str1);
         String str2 = "Check \"this\" out!, \"s inside of \"s!";
         System.out.println(str2);
+        String str3 = "In windows, the main drive is usually C:\\";
+        System.out.println(str3);
     }
 }
