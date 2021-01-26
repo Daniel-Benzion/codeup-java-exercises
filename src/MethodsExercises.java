@@ -61,7 +61,37 @@ public class MethodsExercises {
         }
     }
 
+    public static void diceGame() {
+        System.out.println("How many sides on your dice?\n");
+        Scanner scanner = new Scanner(System.in);
+        int sides = Integer.parseInt(scanner.nextLine());
+        while (true) {
+            System.out.println("Please roll the dice by typing \"roll\". You may quit the game by typing \"quit\".\n");
+            String rollQuit = scanner.nextLine();
+            if (rollQuit.equalsIgnoreCase("quit")) {
+                System.out.println("Bye for now!");
+                break;
+            } else if (rollQuit.equalsIgnoreCase("roll")) {
+                int die1 = rollDice(1, sides);
+                int die2 = rollDice(1, sides);
+                System.out.printf("You rolled a %d and a %d, for a total of: %d%n", die1, die2, die1+die2);
+                System.out.println("Would you like to roll again? y/n");
+                String afterRollQuit = scanner.nextLine();
+                if (afterRollQuit.equalsIgnoreCase("n")) {
+                    System.out.println("Bye for now!");
+                    break;
+                }
+            }
+        }
+
+    }
+
+    public static int rollDice(int min, int max) {
+        return (int) ((Math.random() * (max - min)) + min);
+    }
+
     public static void main(String[] args) {
+        /*
         add(800, 17);
         subtract(800, 17);
         multiply(800, 17);
@@ -70,5 +100,8 @@ public class MethodsExercises {
         mod(800, 17);
         getInteger(4, 16);
         factorial(1, 20);
+
+         */
+        diceGame();
     }
 }
