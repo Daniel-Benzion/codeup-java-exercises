@@ -4,14 +4,13 @@ import java.util.*;
 
 public class Input {
 
-    private Scanner scanner;
+    private final Scanner scanner;
 
     public Input() {
         this.scanner = new Scanner(System.in);
     }
 
     public String getString() {
-        System.out.println("Enter a string:");
         return scanner.nextLine();
     }
 
@@ -29,6 +28,10 @@ public class Input {
                 return input;
             }
         }
+    }
+
+    public String nextLine() {
+        return scanner.nextLine();
     }
 
     public int getInt() {
