@@ -23,9 +23,13 @@ public class Input {
     public int getInt(int min, int max) {
         while (true) {
             System.out.println("Enter a number: ");
-            int input = Integer.parseInt(scanner.nextLine());
-            if (input <= max && input >= min) {
-                return input;
+            try {
+                int input = Integer.parseInt(getString());
+                if (input <= max && input >= min) {
+                    return input;
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("That is not a valid number. Please try again.");
             }
         }
     }
@@ -41,13 +45,16 @@ public class Input {
 
     public double getDouble(double min, double max) {
         while (true) {
-            System.out.println("Enter a number: ");
-            double input = Double.parseDouble(scanner.nextLine());
-            if (input <= max && input >= min) {
-                return input;
+            System.out.println("Enter a decimal number: ");
+            try {
+                double input = Double.parseDouble(getString());
+                if (input <= max && input >= min) {
+                    return input;
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("That is not a valid number. Please try again.");
             }
         }
-
     }
 
     public double getDouble() {
